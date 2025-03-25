@@ -1,0 +1,499 @@
+body {
+    margin: 0;
+    font-family: 'Space Mono', monospace;
+    background: #1a1a1a;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* Custom Cursor */
+.custom-cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background: #ff007a;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.1s, background 0.3s;
+}
+
+/* Navigation */
+.navbar {
+    background: rgba(26, 26, 26, 0.95);
+    padding: 1.5rem 3rem;
+    backdrop-filter: blur(15px);
+    z-index: 1000;
+}
+
+.navbar-brand {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    color: #ff007a !important;
+    letter-spacing: 3px;
+    text-shadow: 0 0 15px #ff007a;
+}
+
+.nav-link {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    color: #00ffcc !important;
+    margin-left: 3rem;
+    transition: all 0.3s;
+}
+
+.nav-link:hover {
+    color: #ff007a !important;
+    text-shadow: 0 0 10px #ff007a;
+}
+
+.nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: radial-gradient(circle, rgba(255, 0, 122, 0.3), rgba(0, 255, 204, 0.3));
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    background: center/cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.layer-1 {
+    background: linear-gradient(45deg, rgba(255, 0, 122, 0.2), rgba(0, 255, 204, 0.2));
+    mix-blend-mode: overlay;
+}
+
+.layer-2 {
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.5), transparent);
+}
+
+.hero-content {
+    text-align: center;
+    z-index: 3;
+}
+
+.animated-text {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 16rem;
+    color: #ff007a;
+    text-transform: uppercase;
+    letter-spacing: 15px;
+    text-shadow: 0 0 50px rgba(255, 0, 122, 0.9);
+    margin: 0;
+}
+
+.subtitle {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.8rem;
+    color: #00ffcc;
+    letter-spacing: 6px;
+    opacity: 0;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    font-size: 2rem;
+    color: #fff;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-15px); }
+    60% { transform: translateY(-8px); }
+}
+
+.geometric-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.shape {
+    position: absolute;
+    background: linear-gradient(135deg, #ff007a, #00ffcc);
+    opacity: 0.6;
+    mix-blend-mode: screen;
+}
+
+.noise-layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/noise.png');
+    opacity: 0.15;
+    z-index: 1;
+}
+
+/* About Section */
+.about-section {
+    padding: 12rem 0;
+    background: #222;
+    position: relative;
+}
+
+.section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 12rem;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 5rem;
+    text-shadow: 0 0 40px rgba(255, 255, 255, 0.4);
+}
+
+.lead {
+    font-size: 2rem;
+    color: #ddd;
+    line-height: 1.7;
+}
+
+.stats {
+    display: flex;
+    gap: 4rem;
+    margin-top: 3rem;
+    justify-content: center;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 4rem;
+    color: #ff007a;
+    text-shadow: 0 0 10px #ff007a;
+}
+
+.stat-item p {
+    font-size: 1.4rem;
+    color: #00ffcc;
+}
+
+.about-visual {
+    position: relative;
+    height: 400px;
+}
+
+.rotating-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    color: #fff;
+    text-transform: uppercase;
+    animation: rotateText 25s linear infinite;
+}
+
+@keyframes rotateText {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.floating-shapes {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+/* Works Section */
+.parallax-section {
+    position: relative;
+    padding: 0;
+    overflow: hidden;
+}
+
+.parallax-bg {
+    position: absolute;
+    width: 100%;
+    height: 120%;
+    background: center/cover no-repeat;
+    z-index: -1;
+    opacity: 0.5;
+    mix-blend-mode: overlay;
+}
+
+.works-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 0;
+}
+
+.work-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.work-item img {
+    width: 100%;
+    height: 90vh;
+    object-fit: cover;
+    transition: transform 0.7s ease, filter 0.3s;
+}
+
+.work-item:hover img {
+    transform: scale(1.15);
+    filter: brightness(1.2);
+}
+
+.work-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: rotate(-10deg) scale(0);
+    transition: transform 0.5s ease;
+}
+
+.work-item:hover .work-overlay {
+    transform: rotate(0deg) scale(1);
+}
+
+.work-overlay h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 4rem;
+    color: #ff007a;
+    text-shadow: 0 0 15px #ff007a;
+}
+
+.work-overlay p {
+    font-size: 1.8rem;
+    color: #00ffcc;
+}
+
+/* Timeline Section */
+.timeline-section {
+    padding: 12rem 0;
+    background: #1a1a1a;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 4rem;
+    padding-left: 3rem;
+}
+
+.timeline-item::before {
+    content: attr(data-year);
+    position: absolute;
+    left: -2rem;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    color: #ff007a;
+    transform: rotate(-90deg);
+    transform-origin: left;
+}
+
+.timeline-item h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    color: #00ffcc;
+}
+
+.timeline-item p {
+    font-size: 1.5rem;
+    color: #ddd;
+}
+
+/* Team Section */
+.team-section {
+    padding: 12rem 0;
+    position: relative;
+    background: #222; /* Fallback background */
+}
+
+.team-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: center/cover no-repeat;
+    opacity: 0.25;
+    z-index: -1;
+}
+
+.team-member {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 3rem;
+    text-align: center;
+    border: 2px solid #ff007a;
+    transition: transform 0.4s, box-shadow 0.4s;
+    min-height: 250px; /* Consistent height */
+    width: 100%; /* Ensure full width within column */
+}
+
+.team-member:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 0 20px #ff007a;
+}
+
+.team-member h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    color: #ff007a;
+}
+
+.team-member p {
+    font-size: 1.5rem;
+    color: #00ffcc;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 12rem 0;
+    background: linear-gradient(135deg, #1a1a1a, #333);
+    position: relative;
+}
+
+.contact-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.contact-section .section-title {
+    color: #fff;
+    margin-bottom: 4rem;
+}
+
+.contact-section .lead {
+    font-size: 1.8rem;
+    color: #ddd;
+    margin-bottom: 3rem;
+}
+
+.contact-form {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 3rem;
+    border-radius: 10px;
+    border: 1px solid #ff007a;
+}
+
+.contact-form .form-label {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    color: #00ffcc;
+    margin-bottom: 0.5rem;
+}
+
+.contact-form .form-control {
+    background: #222;
+    border: 1px solid #ff007a;
+    color: #fff;
+    font-family: 'Space Mono', monospace;
+    font-size: 1.2rem;
+    padding: 1rem;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+.contact-form .form-control:focus {
+    border-color: #00ffcc;
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+    outline: none;
+}
+
+.contact-form .form-control::placeholder {
+    color: #888;
+}
+
+.btn-outline-primary {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    color: #00ffcc;
+    border: 2px solid #00ffcc;
+    padding: 12px 40px;
+    text-transform: uppercase;
+    transition: all 0.4s;
+    background: transparent;
+    display: inline-block;
+}
+
+.btn-outline-primary:hover {
+    background: #00ffcc;
+    color: #1a1a1a;
+    box-shadow: 0 0 20px #00ffcc;
+}
+
+.contact-info {
+    font-size: 1.2rem;
+    color: #ddd;
+}
+
+.contact-info a {
+    color: #ff007a;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-info a:hover {
+    color: #00ffcc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .animated-text { font-size: 9rem; }
+    .subtitle { font-size: 2rem; }
+    .section-title { font-size: 7rem; }
+    .work-item img { height: 60vh; }
+    .work-overlay h3 { font-size: 2.5rem; }
+    .navbar-brand { font-size: 2rem; }
+    .nav-link { font-size: 1.5rem; margin-left: 1rem; }
+    .team-member { min-height: 200px; }
+    .contact-form { padding: 2rem; }
+    .btn-outline-primary { font-size: 1.5rem; padding: 10px 30px; }
+}
+
+/* Ensure Font Awesome icons render correctly */
+i[class^="fa-"] {
+    font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+    font-weight: 900; /* Required for solid icons (fas) */
+    font-style: normal;
+    display: inline-block;
+    color: inherit;
+    opacity: 1;
+}
+
+.scroll-indicator i {
+    font-size: 2rem;
+    color: #fff;
+}

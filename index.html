@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypoVibe | Experimental Typography Studio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:wght@400;700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <!-- Updated Font Awesome CDN -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.1/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">TypoVibe</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#works">Works</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#timeline">Timeline</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="nav-overlay"></div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section" style="background-image: url('https://images.unsplash.com/photo-1518709268805-4e9042af5929?q=80&w=1974&auto=format&fit=crop');">
+        <div class="hero-layer layer-1"></div>
+        <div class="hero-layer layer-2"></div>
+        <div class="hero-content">
+            <h1 class="display-1 animated-text">TypoVibe</h1>
+            <p class="subtitle">Redefining Typography Through Art</p>
+            <div class="scroll-indicator"><i class="fas fa-arrow-down"></i></div>
+        </div>
+        <div class="geometric-overlay"></div>
+        <div class="noise-layer"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container-fluid">
+            <h2 class="section-title">Our Vision</h2>
+            <div class="row align-items-center">
+                <div class="col-md-5">
+                    <p class="lead">TypoVibe pioneers the fusion of typography, technology, and experimental design to create unforgettable visual narratives.</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="75">0</span>+
+                            <p>Projects</p>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="15">0</span>+
+                            <p>Awards</p>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="8">0</span>+
+                            <p>Years</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="about-visual">
+                        <div class="rotating-text">Innovate • Create • Inspire</div>
+                        <div class="floating-shapes"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Works Section with Parallax -->
+    <section id="works" class="parallax-section" style="background-image: url('https://images.unsplash.com/photo-1544377191-33dcf4d68e99?q=80&w=1974&auto=format&fit=crop');">
+        <div class="parallax-bg"></div>
+        <div class="container-fluid content">
+            <h2 class="section-title">Our Works</h2>
+            <div class="works-grid">
+                <div class="work-item" data-project="1">
+                    <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?q=80&w=2070&auto=format&fit=crop" alt="Neon Typography" class="img-fluid">
+                    <div class="work-overlay">
+                        <h3>Neon Words</h3>
+                        <p>Vivid typographic experiments with neon hues.</p>
+                    </div>
+                </div>
+                <div class="work-item" data-project="2">
+                    <img src="https://images.unsplash.com/photo-1516541196182-6bdb0516ed27?q=80&w=1974&auto=format&fit=crop" alt="Geometric Art" class="img-fluid">
+                    <div class="work-overlay">
+                        <h3>GeoType</h3>
+                        <p>Geometric forms intertwined with text.</p>
+                    </div>
+                </div>
+                <div class="work-item" data-project="3">
+                    <img src="https://images.unsplash.com/photo-1551983185-8ed512e4de24?q=80&w=1974&auto=format&fit=crop" alt="3D Text" class="img-fluid">
+                    <div class="work-overlay">
+                        <h3>3D Dimensions</h3>
+                        <p>Typography elevated into 3D space.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="timeline" class="timeline-section">
+        <div class="container-fluid">
+            <h2 class="section-title">Our Journey</h2>
+            <div class="timeline">
+                <div class="timeline-item" data-year="2016">
+                    <h3>Founded</h3>
+                    <p>TypoVibe begins as a small creative collective.</p>
+                </div>
+                <div class="timeline-item" data-year="2019">
+                    <h3>First Award</h3>
+                    <p>Won Best Typography Design at ArtFest.</p>
+                </div>
+                <div class="timeline-item" data-year="2023">
+                    <h3>Global Reach</h3>
+                    <p>Expanded to international clients.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team-section">
+        <div class="team-bg" style="background-image: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2084&auto=format&fit=crop');"></div>
+        <div class="container">
+            <h2 class="section-title">The Crew</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="team-member">
+                        <h3>Alex Neon</h3>
+                        <p>Creative Director</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team-member">
+                        <h3>Sara Geo</h3>
+                        <p>Lead Designer</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team-member">
+                        <h3>Max Code</h3>
+                        <p>Tech Artist</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <p class="lead text-center">Have a project in mind? Contact us to discuss how TypoVibe can bring your vision to life.</p>
+                    <form class="contact-form">
+                        <div class="mb-4">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="5" placeholder="Tell us about your project" required></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-outline-info">Send Message</button>
+                        </div>
+                    </form>
+                    <div class="contact-info mt-5 text-center">
+                        <p>Email: <a href="mailto:info@typovibe.com">info@typovibe.com</a></p>
+                        <p>Phone: +1 (555) 123-4567</p>
+                        <p>Address: 123 Creative Lane, Design City, DC 45678</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
